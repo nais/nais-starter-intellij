@@ -10,12 +10,11 @@ plugins {
 }
 
 group = "io.nais"
-version = "1.0-SNAPSHOT"
 
-   tasks.withType<JavaCompile> {
-      sourceCompatibility = "1.8"
-      targetCompatibility = "1.8"
-   }
+tasks.withType<JavaCompile> {
+   sourceCompatibility = "1.8"
+   targetCompatibility = "1.8"
+}
 listOf("compileKotlin", "compileTestKotlin").forEach {
    tasks.getByName<KotlinCompile>(it) {
       kotlinOptions.jvmTarget = "1.8"
