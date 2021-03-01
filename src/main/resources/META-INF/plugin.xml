@@ -4,7 +4,7 @@
     <vendor email="aura@nav.no" url="https://nais.io">NAV</vendor>
 
     <description><![CDATA[
-    This plugin lets <a href="https://nais.io">NAIS</A> users bootstrap build and deploy for their apps without
+    This plugin lets <a href="https://nais.io">NAIS</a> users bootstrap build and deploy for their apps without
     doing lots of manual YAML gymnastics.
     ]]></description>
 

@@ -1,6 +1,5 @@
 package io.nais
 
-import com.intellij.util.io.exists
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
@@ -58,7 +57,6 @@ class IOTest {
    fun `filepath below project dir is ok`() {
       val goodPath = "$tmpDir/something/further/below"
       Files.createDirectories(Paths.get(goodPath).normalize())
-      println("***** ${Paths.get(goodPath).normalize().exists()}")
       assertDoesNotThrow { writeAppConfig(mapOf(goodPath to "whatever content"), tmpDir) }
    }
 
