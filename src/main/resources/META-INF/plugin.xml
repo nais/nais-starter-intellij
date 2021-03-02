@@ -1,26 +1,27 @@
 <idea-plugin>
-    <id>io.nais.nais-starter-intellij</id>
-    <name>NAIS starter</name>
-    <version>1</version>
-    <vendor email="aura@nav.no" url="https://nais.io">NAV</vendor>
+   <id>io.nais.nais-starter-intellij</id>
+   <name>NAIS starter</name>
+   <version>1</version>
+   <idea-version since-build="203"  />
+   <vendor email="aura@nav.no" url="https://nais.io">NAV</vendor>
 
-    <description><![CDATA[
+   <description><![CDATA[
     This plugin lets <a href="https://nais.io">NAIS</a> users bootstrap build and deploy for their apps without
     doing lots of manual YAML gymnastics.
     ]]></description>
 
-    <depends>com.intellij.modules.platform</depends>
+   <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-       <notificationGroup id="NAIS" displayType="BALLOON" />
-    </extensions>
+   <extensions defaultExtensionNs="com.intellij">
+      <notificationGroup id="NAIS" displayType="BALLOON" />
+   </extensions>
 
-    <actions>
+   <actions>
 
-        <action id="io.nais.NAISConfigAction" class="io.nais.NAISConfigAction" text="NAISify"
-                description="Create k8s config and GitHub workflow for this app">
-            <add-to-group group-id="ToolsMenu" anchor="first"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta alt N"/>
-        </action>
-    </actions>
+      <action id="io.nais.NAISConfigAction" class="io.nais.NAISConfigAction" text="NAISify"
+              description="Create k8s config and GitHub workflow for this app">
+         <add-to-group group-id="ToolsMenu" anchor="first"/>
+         <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta alt N"/>
+      </action>
+   </actions>
 </idea-plugin>
