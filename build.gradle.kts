@@ -46,5 +46,9 @@ tasks {
          exceptionFormat = FULL
       }
    }
+
+   withType<org.jetbrains.intellij.tasks.PublishTask> {
+      setToken(System.getenv("JETBRAINS_MARKETPLACE_TOKEN"))
+   }
 }
 
