@@ -24,3 +24,6 @@ jobs:
             run: ./gradlew buildPlugin
          -  name: Publish plugin
             run: ./gradlew publishPlugin
+            env:
+               JETBRAINS_MARKETPLACE_TOKEN: ${{ secrets.JETBRAINS_MARKETPLACE_TOKEN }}
+
