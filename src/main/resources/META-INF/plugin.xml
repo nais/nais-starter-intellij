@@ -1,8 +1,8 @@
 <idea-plugin>
    <id>io.nais.nais-starter-intellij</id>
    <name>NAIS starter</name>
-   <version>2</version>
-   <idea-version since-build="203"  />
+   <version>3</version>
+   <idea-version since-build="203.3645.34"  />
    <vendor email="aura@nav.no" url="https://nais.io">NAV</vendor>
 
    <description><![CDATA[
