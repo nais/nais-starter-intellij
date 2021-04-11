@@ -35,7 +35,14 @@ class IOTest {
    }
 
    @Test
-   fun `platform is recognized as NODEJS if build package json is present`() {
+   fun `platform is recognized as GOLANG if go_mod is present`() {
+      val packageJson = File("$tmpDir/go.mod").apply { createNewFile() }
+      assertEquals("GO_MAKE", determinePlatform(tmpDir))
+      packageJson.delete()
+   }
+
+   @Test
+   fun `platform is recognized as NODEJS if package json is present`() {
       val packageJson = File("$tmpDir/package.json").apply { createNewFile() }
       assertEquals("NODEJS", determinePlatform(tmpDir))
       packageJson.delete()
