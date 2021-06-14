@@ -33,7 +33,8 @@ class NAISConfigAction: AnAction() {
 enum class ExtraFeature(val displayName: String, val shortName: String) {
    POSTGRES("Postgres", "postgres"),
    IDPORTEN("ID-porten", "idporten"),
-   AAD("Azure AD", "aad")
+   AAD("Azure AD", "aad"),
+   ELASTIC("Elasticsearch", "elastic")
 }
 
 private fun notify(msg: String, type: NotificationType, project: Project) =
