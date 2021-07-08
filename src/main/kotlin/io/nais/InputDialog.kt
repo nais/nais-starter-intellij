@@ -20,7 +20,7 @@ data class FormData(
 )
 
 class InputDialog(private val project: Project, projectType: String, extras: List<ExtraFeature>) : DialogWrapper(project, false), KeyListener {
-   private val txtWidth = 19
+   private val txtWidth = 35
    private val appLabel = JLabel("App")
    private val appField = JTextField(project.name, txtWidth)
    private val teamLabel = JLabel("Team")
