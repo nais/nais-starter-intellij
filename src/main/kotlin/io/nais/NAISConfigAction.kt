@@ -34,7 +34,7 @@ enum class ExtraFeature(val displayName: String, val shortName: String) {
    POSTGRES("Postgres", "postgres"),
    IDPORTEN("ID-porten", "idporten"),
    AAD("Azure AD", "aad"),
-   ELASTIC("Elasticsearch", "elastic"),
+   OPENSEARCH("Opensearch", "openSearch"),
    BIGQUERY("BigQuery", "bigquery")
 }
 
