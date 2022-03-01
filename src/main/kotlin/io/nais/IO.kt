@@ -51,7 +51,9 @@ private val platforms = mapOf(
    "build.gradle" to "JVM_GRADLE",
    "build.gradle.kts" to "JVM_GRADLE",
    "package.json" to "NODEJS",
-   "go.mod" to "GO_MAKE"
+   "go.mod" to "GO_MAKE",
+   "poetry.lock" to "PYTHON_POETRY",
+   "requirements.txt" to "PYTHON_PIP",
 )
 
 private fun toKeyValue(json: String) = jacksonObjectMapper().readTree(json).let { jsonNode ->

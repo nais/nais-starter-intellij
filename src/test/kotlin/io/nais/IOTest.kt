@@ -49,6 +49,20 @@ class IOTest {
    }
 
    @Test
+   fun `platform is recognized as PYTHON_POETRY if poetry lock is present`() {
+      val poetryLock = File("$tmpDir/poetry.lock").apply { createNewFile() }
+      assertEquals("PYTHON_POETRY", determinePlatform(tmpDir))
+      poetryLock.delete()
+   }
+
+   @Test
+   fun `platform is recognized as PYTHON_PIP if requirements txt is present`() {
+      val requirementsTxt = File("$tmpDir/requirements.txt").apply { createNewFile() }
+      assertEquals("PYTHON_PIP", determinePlatform(tmpDir))
+      requirementsTxt.delete()
+   }
+
+   @Test
    fun `filepath with lfi is rejected`() {
       val pathWithLFI = "./../../whatever"
       assertThrows<IllegalArgumentException> { writeAppConfig(mapOf(pathWithLFI to "whatever content"), tmpDir) }
