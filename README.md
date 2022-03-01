@@ -12,6 +12,9 @@ Currently supported project types are:
 - Maven
 - Gradle
 - NodeJS/NPM
+- Go/Make
+- Python/Poetry
+- Python/Pip
 
 Project type is determined automatically based on the presence of `pom.xml`, `package.json` et al. in the project directory
 
