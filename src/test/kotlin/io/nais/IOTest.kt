@@ -71,14 +71,14 @@ class IOTest {
    @Test
    fun `filepath on the same level as project dir is ok`() {
       val goodPath = "$tmpDir/./whatever"
-      assertDoesNotThrow { writeAppConfig(mapOf(goodPath to "whatever content"), tmpDir) }
+      assertDoesNotThrow { writeAppConfig(mapOf(goodPath to "whatevercontent"), tmpDir) }
    }
 
    @Test
    fun `filepath below project dir is ok`() {
       val goodPath = "$tmpDir/something/further/below"
       Files.createDirectories(Paths.get(goodPath).normalize())
-      assertDoesNotThrow { writeAppConfig(mapOf(goodPath to "whatever content"), tmpDir) }
+      assertDoesNotThrow { writeAppConfig(mapOf(goodPath to "whatevercontent"), tmpDir) }
    }
 
 }

@@ -12,12 +12,12 @@ plugins {
 group = "io.nais"
 
 tasks.withType<JavaCompile> {
-   sourceCompatibility = "1.8"
-   targetCompatibility = "1.8"
+   sourceCompatibility = "11"
+   targetCompatibility = "11"
 }
 listOf("compileKotlin", "compileTestKotlin").forEach {
    tasks.getByName<KotlinCompile>(it) {
-      kotlinOptions.jvmTarget = "1.8"
+      kotlinOptions.jvmTarget = "11"
    }
 }
 
@@ -30,6 +30,10 @@ dependencies {
 
    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+}
+java {
+   sourceCompatibility = JavaVersion.VERSION_11
+   targetCompatibility = JavaVersion.VERSION_11
 }
 
 intellij {

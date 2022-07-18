@@ -2,7 +2,6 @@ package io.nais
 
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.intellij.util.Base64
 import org.apache.http.client.methods.CloseableHttpResponse
 import org.apache.http.client.methods.HttpPost
 import org.apache.http.entity.StringEntity
@@ -11,6 +10,7 @@ import org.apache.http.util.EntityUtils
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
+import java.util.Base64
 import kotlin.io.path.ExperimentalPathApi
 import kotlin.io.path.name
 import kotlin.streams.toList
@@ -42,7 +42,7 @@ fun writeAppConfig(data: Map<String, String>, projectDir: String) {
       val dirPath = filePath.parent
       if (dirPath.isParentOf(projectPath)) throw IllegalArgumentException("Filename $key looks kinda suspicious, possibly LFI?")
       Files.createDirectories(dirPath)
-      Files.writeString(filePath, String(Base64.decode(value)))
+      Files.writeString(filePath, String(Base64.getDecoder().decode(value)))
    }
 }
 
