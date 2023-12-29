@@ -6,7 +6,7 @@ This plugin lets [NAIS](https://nais.io) users bootstrap build and deploy for th
 
 ## Features
 
-This plugin asks for the informations it needs, uses this info to retrieve basic YAML from [start.nais.io](https://start.nais.io) and saves it in the project directory.
+This plugin asks for the informations it needs, uses this info to retrieve basic YAML from [the nais starter webservice](https://start.external.prod-gcp.nav.cloud.nais.io) and saves it in the project directory.
 
 Currently supported project types are:
 - Maven

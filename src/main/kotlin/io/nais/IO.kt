@@ -17,7 +17,7 @@ import kotlin.streams.toList
 
 fun requestAppConfig(formData: FormData): Map<String, String> = HttpClients.createDefault().use { httpClient ->
    val jsonMapper = jacksonObjectMapper()
-   val post = HttpPost("https://start.nais.io/app").apply {
+   val post = HttpPost("https://start.external.prod-gcp.nav.cloud.nais.io/app").apply {
       addHeader("Content-Type", "application/json")
       addHeader("Accept", "application/json")
       entity = StringEntity(jsonMapper.writeValueAsString(formData))
